@@ -81,7 +81,6 @@ function pingMessage(e) {
 }
 /*
  * geef ook jij's op alternatieve vormen van je eigen naam
-*/
 
 (function(){
 	let jijRegex
@@ -130,6 +129,7 @@ function pingMessage(e) {
 		e.msg.match(jijRegex) && (pingMessage(1), $("#messagebuffer>div:last-child").addClass('nick-highlight'))
 	})
 })()
+*/
 
 /*
  * open chatmodus wanneer de url eindigt met '#'
