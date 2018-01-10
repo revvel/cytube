@@ -79,57 +79,6 @@ function pingMessage(e) {
     }, 1e3)),
     ("always" === USEROPTS.boop || "onlyping" === USEROPTS.boop && e) && CHATSOUND.play())
 }
-/*
- * geef ook jij's op alternatieve vormen van je eigen naam
-
-(function(){
-	let jijRegex
-	switch (CLIENT.name){
-		case "Bourg":
-			jijRegex = /bo(e|u)r(\W|$)/i; break
-		case "staneke":
-			jijRegex = /stan(n(i|k)e)?(\W|$)/i; break
-		case "RodeVans":
-			jijRegex = /jelmer|ro(de|oie)/i; break
-		case "Beir":
-			jijRegex = /(\W|^)beer(tje)?(\W|$)/i; break
-		case "Freems":
-			jijRegex = /friem(el|s)/i; break
-		case "EenVerdrinkendeLeeuw":
-			jijRegex = /(leeuw|lion)(\W|$)/i; break
-		case "lievejongen":
-			jijRegex = /(lieve|jongen|dor(i|u)s)(\W|$)/i; break
-		case "sinterklaas":
-			jijRegex = /sint/i; break
-		case "Berteke":
-			jijRegex = /bert(\W|$)/i; break
-		case "Rova":
-			jijRegex = /vos(\W|$)/i; break
-		case "Friet":
-			jijRegex = /fliet(\W|$)/i; break
-		case "PeterPost":
-			jijRegex = /peter(\W|$)/i; break
-		case "klepelknul":
-			jijRegex = /klepel/i; break
-		case "voormaligGha":
-			jijRegex = /Gha(\W|$)/i; break
-		case "Yankee":
-			jijRegex = /yank/i; break
-		case "chillburg":
-			jijRegex = /chill(\W|$)/i; break
-		case "Nedergoeroe":
-			jijRegex = /(neder|goeroe)(\W|$)/i; break
-		case "Ceasium":
-			jijRegex = /(\W|^)kaas(\W|$)/i; break
-	}
-	// doe niks als er geen alternatieve naam voor jou is
-	jijRegex === undefined ||
-	// indien er wel 1 is, zet deze listener:
-	socket.on('chatMsg', function(e){
-		e.msg.match(jijRegex) && (pingMessage(1), $("#messagebuffer>div:last-child").addClass('nick-highlight'))
-	})
-})()
-*/
 
 /*
  * open chatmodus wanneer de url eindigt met '#'
