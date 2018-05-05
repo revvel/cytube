@@ -319,7 +319,7 @@ var addChatMessage = (function(e){
 			sANg0rqbkNxrA1QA277vPwgh3gHUnufdl2W5nqbpVZZlB0mSXAIYAxjHcXwDYBOdqvpWHXjCfrOBoQJY6xL/UFtRFF0oinKrNNSVS/3P8MqAI\
 			Aju2uelAsRviIckURTFGeq6Pl1m2HGc5/Y/+AHWdA+ZKGYKWwAAAABJRU5ErkJggg==",
         cytuicon2 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAMAAAAR8Wy4AAAAkFBMVEVHcEz///////////////8EBAT+/v4AAAD///////+QkJD///////+np6dEREQ6Ojr///////////////////////////+bm5t/f38AAABMTEzc3Ny+vr4BAQH///9dXV21tbU0NDQAAACxsbH///84ODh9fX3////U1NTQ0NDAwMAtLS3///8bGxsAAAAzzP/2yaEVAAAALnRSTlMAIHEJBPid/QEFw1SSvePmFAc6WoZZE8LO996nuPVM2ePu9OZ12PMcrOfe643wUP8+wAAAAHlJREFUeF5ti8cOAyEMBR+7gGFLeu+9x/z/30WYA1GUOdijkQ28nrTdAK0xbU95oOHItRNn1wF4SzizMAZAYocUCgCV2CkFROL3TdfETEPnNerVni733eNo1tNGTUrM+YtRfwCREIJsW3EOif8hM/u9KMolLGcW2rsP+DsekAyk7jQAAAAASUVORK5CYII=",
-        icon = $('<link/>').attr('rel','shortcut icon').attr('href',cytuicon).appendTo($("head"))[0]; /* '[0]' because this returns an array for some reason */
+        icon = $('link[rel="shortcut icon"]')[0] || $('<link/>').attr('rel','shortcut icon').attr('href',cytuicon).appendTo($("head"))[0];
     window.onfocus=function(){
         hasfocus=1,
         missedchats=0,
